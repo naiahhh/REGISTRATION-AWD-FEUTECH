@@ -19,24 +19,27 @@ $(document).ready(function(){
 });
 
 $(document).ready(function() {
+  // Check email format
   function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
   }
 
+  // Handle form submission
   $('.btn a').click(function(event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    var $form = $(this).closest('div.right').find('.register:visible, .login:visible');
-    var $emailInput = $form.find('input[type="email"]');
-    var email = $emailInput.val();
+      var $form = $(this).closest('.register, .login');
+      var $emailInput = $form.find('input[type="email"]');
+      var email = $emailInput.val().trim(); // Trim the email address
 
-    if (!validateEmail(email)) {
-      alert('Please enter a valid email address.');
-      $emailInput.focus();
-      return;
-    }
+      if (!validateEmail(email)) {
+          alert('Please enter a valid email address.');
+          $emailInput.focus();
+          return;
+      }
 
-    alert('Form submitted successfully.');
+      // Here you can add further validation or submit the form
+      alert('Form submitted successfully.');
   });
 });
