@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         document.querySelector(".col-1").style.borderRadius = "0 30% 20% 0";
     });
-    
+
+    // Validation for Inputs
     $(document).ready(function() {
         const validateForm = (formType) => {
             return true;
