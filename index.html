@@ -1,64 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Register-login Form</title>
-	<link rel="stylesheet" href="./assets/css/form.css">
-	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-	<script src="./assets/js/form.js"></script>
-  
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTRL JOB | Login & Register</title>
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/jpg" href="assets/img/favicon.png">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <div class="wrapper">
-  <div class="left">
-      <!-- <h3></h3>    -->
-    <img src="./assets/img/skull.png">
-  </div>
-  <div class="right">
-    <div class="tabs">
-      <ul>
-        <li class="register_li">Register</li>
-        <li class="login_li">login</li>
-      </ul>
+    <!-- Form Container -->
+    <div class="form-container">
+        <div class="col col-1">
+            <div class="image-layer">
+                <img src="assets/img/white-outline.png" class="form-image-main">
+                <img src="assets/img/dots.png" class="form-image dots">
+                <img src="assets/img/coin.png" class="form-image coin">
+                <img src="assets/img/spring.png" class="form-image spring">
+                <img src="assets/img/rocket.png" class="form-image rocket">
+                <img src="assets/img/cloud.png" class="form-image cloud">
+                <img src="assets/img/stars.png" class="form-image stars">
+            </div>
+            <p class="featured-words">Take Control of Your Career with <span>CTRL+ JOB</span></p>
+        </div>
+        <div class="col col-2">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Sign In</button>
+                <button class="btn btn-2" id="register">Sign Up</button>
+            </div>
+            <!-- Login Form Container -->
+            <div class="login-form">
+                <div class="form-title">
+                    <span>Sign In</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Email" required>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Password" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="forgot-pass">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <div class="input-box">
+                        <button class="input-submit">
+                            <span>Sign In</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="social-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-google"></i>
+            </div>
+            </div>
+
+        <!-- Register Form Container -->  
+        <div class="register-form">
+            <div class="form-title">
+                <span>Create Account</span>
+            </div>
+            <div class="form-inputs">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="First Name" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Last Name" required>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email" required>
+                    <i class="bx bx-envelope icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" required>
+                    <i class="bx bx-lock-alt icon"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Confirm Password" required>
+                    <i class="bx bx-lock-alt icon"></i>
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terms and Conditions</a></label>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <button class="input-submit">
+                        <span>Sign Up</span>
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
+    </div>
+            
+            
+            
     
-    <div class="register">
-      <div class="input_field">
-        <input type="text" placeholder="Username" class="input">
-      </div>
-      <div class="input_field">
-        <input type="text" placeholder="E-mail" class="input">
-      </div>
-      <div class="input_field">
-        <input type="password" placeholder="Password" class="input">
-      </div>
-      <div class="btn"><a href="#">Register</a></div>
-     
-    </div>
-    <!-- <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email address</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
-    </div> -->
-    <div class="login">
-      <div class="input_field">
-        <input type="text" placeholder="E-mail" class="input">
-      </div>
-      <div class="input_field">
-        <input type="password" placeholder="Password" class="input">
-      </div>
-      <div class="btn"><a href="#">Login</a></div>
-    </div>
-    <!-- <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check for email updates</label>
-    </div> -->
-  </div>
-</div>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
