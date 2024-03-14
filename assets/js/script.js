@@ -1,4 +1,9 @@
-
+// Variable Declaration
+document.addEventListener('DOMContentLoaded', function () {
+    const loginBtn = document.querySelector("#login");
+    const registerBtn = document.querySelector("#register");
+    const loginForm = document.querySelector(".login-form");
+    const registerForm = document.querySelector(".register-form");
 
     // Login button function
     loginBtn.addEventListener("click", () => {
