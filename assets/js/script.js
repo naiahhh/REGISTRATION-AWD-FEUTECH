@@ -1,4 +1,3 @@
-// Variable Declaration
 document.addEventListener('DOMContentLoaded', function () {
     const loginBtn = document.querySelector("#login");
     const registerBtn = document.querySelector("#register");
@@ -42,7 +41,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const clearForm = (form) => {
             form.find('input').val('');
         };
-    
+
+        // Event for focusing on input fields
+        $('.input-field').focus(function() {
+            $(this).parent().addClass('focus');
+        });
+
+        $('.input-field').blur(function() {
+            if ($(this).val() === '') {
+                $(this).parent().removeClass('focus');
+            }
+        });
+
         $('.login-form').submit(function(event) {
             event.preventDefault();
             if (validateForm("login")) {
